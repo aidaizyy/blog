@@ -1,4 +1,4 @@
-title: "Swift基础入门(7)：属性，方法和下标脚本"
+title: "Swift基础入门(7)：属性，方法和下标"
 date: 2015-07-20 10:10:20
 tags:
 - swift
@@ -6,13 +6,13 @@ categories:
 toc: true
 ---
 
-本篇介绍Swift的基础知识：枚举，结构体和类的属性，方法和下标脚本。
+本篇介绍Swift的基础知识：枚举，结构体和类的属性，方法和下标。
 
 <!--more-->
-**Title: [Swift基础入门(7)：属性，方法和下标脚注](https://aidaizyy.github.io/swift_7)**
+**Title: [Swift基础入门(7)：属性，方法和下标](https://aidaizyy.github.io/swift_7)**
 **Author: [Yunyao Zhang(张云尧)](http://aidaizyy.github.io)**
 **E-mail: <aidaizyy@gmail.com>**
-**Last Modified: [2015-07-22](http://aidaizyy.github.io)**
+**Last Modified: [2015-07-24](http://aidaizyy.github.io)**
 
 # 属性
 属性分为存储属性（只能用于类和结构体）和计算属性（可用于类，结构体和枚举）。
@@ -305,9 +305,9 @@ class SomeClass {
 SomeClass.someTypeMethod()
 ```
 
-# 下标脚本
-下标脚本（_subscripts_）可以定义在类，结构体和枚举中，是访问对象，集合和序列的快捷方式。比如[数组的访问](http://aidaizyy.github.io/swift_3/#访问)：Array[index]，[字典的访问](http://aidaizyy.github.io/swift_3/#访问-1)：Dictionary[key]。
-下标脚本的定义类似于实例方法和计算性属性的混合。
+# 下标
+下标（_subscripts_）可以定义在类，结构体和枚举中，是访问对象，集合和序列的快捷方式。比如[数组的访问](http://aidaizyy.github.io/swift_3/#访问)：Array[index]，[字典的访问](http://aidaizyy.github.io/swift_3/#访问-1)：Dictionary[key]。
+下标的定义类似于实例方法和计算性属性的混合。
 使用`subscript`关键字，定义了传入参数数量和类型和返回类型，定义了getter和setter。
 ``` swift
 subscript(index: Int) -> Int {
@@ -333,7 +333,7 @@ let threeTimesTable = TimesTable(multiplier: 3)
 println("3的6倍是\(threeTimesTable[6])")
 // 输出 "3的6倍是18"
 ```
-下标脚本允许任意数量的传入参数，任意类型的传入参数和任意类型的返回值。
+下标允许任意数量的传入参数，任意类型的传入参数和任意类型的返回值。
 可以使用[变量参数](http://aidaizyy.github.io/swift_5/#变量参数)和[可变参数](http://aidaizyy.github.io/swift_5/#可变参数)，但是不能使用[输入输出参数（inout）](http://aidaizyy.github.io/swift_5/#输入输出参数)和[默认参数值](http://aidaizyy.github.io/swift_5/#默认参数值)。
 ``` swift
 struct Matrix {

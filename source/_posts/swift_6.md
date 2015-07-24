@@ -12,7 +12,7 @@ toc: true
 **Title: [Swift基础入门(6)：枚举，类和结构体](https://aidaizyy.github.io/swift_6)**
 **Author: [Yunyao Zhang(张云尧)](http://aidaizyy.github.io)**
 **E-mail: <aidaizyy@gmail.com>**
-**Last Modified: [2015-07-22](http://aidaizyy.github.io)**
+**Last Modified: [2015-07-24](http://aidaizyy.github.io)**
 
 # 枚举
 
@@ -129,5 +129,5 @@ Swift中，几乎所有的基本类型，包括字符串，数组和字典等都
 `====`恒等运算符用来形容两者指向同一对象，表示两个实例等价。
 
 枚举，类和结构体的其他特性，参见：
-[Swift基础入门(7)：属性，方法和下标脚注](http://aidaizyy.github.io/swift_7)
-[Swift基础入门(8)：继承，构造过程和析构过程](http://aidaizyy.github.io/swift_8)
+[Swift基础入门(7)：属性，方法和下标](http://aidaizyy.github.io/swift_7)
+[Swift基础入门(8)：继承，构造，析构和嵌套类型](http://aidaizyy.github.io/swift_8)

@@ -193,16 +193,13 @@ let tmpValue: tmpType = 4
 
 ### 类型转换
 
-- ->String：
-\\()的方法可将任意类型转换为字符串，其他类型转换必须通过显示转换。
-比如`String(currentNumber)`，即完成`\(currentNumber)`一样的转换。
-
 - Int，Double，Float：
 `Int16`与`Int8`不能直接相加，需要通过`Int16(Int8)`转换。
 同样，`Double`与`Int`也不能相加，也需要通过`Double(Int)`转换，如果只需要整数部分，也可以通过`Int(Double)`转换。
 
-- String->Int：
-`种String.toInt()`函数可以把`String`转换成可选类型`Int?`，因为`String`中不一定能转换成`Int`，所以得到可选类型。
+- String，Int：
+String->Int：`String.toInt()`函数可以把`String`转换成可选类型`Int?`，因为`String`中不一定能转换成`Int`，所以得到可选类型。
+Int->String：`String(Int)`函数可以把`Int`转换成`String`。
 
 ## 基本运算符
 

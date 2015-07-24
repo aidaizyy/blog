@@ -5,16 +5,16 @@ categories:
 toc: true
 ---
 
-本篇介绍Swift的基础知识：通过可选链（_optional chaining_）调用属性，方法和下标脚本；自动引用计数（_automatic reference counting_）的工作机制；循环强引用的解决方案。
+本篇介绍Swift的基础知识：通过可选链（_optional chaining_）调用属性，方法和下标；自动引用计数（_automatic reference counting_）的工作机制；循环强引用的解决方案。
 
 <!--more-->
 **Title: [Swift基础入门(9)：可选链自动引用计数](https://aidaizyy.github.io/swift_9)**
 **Author: [Yunyao Zhang(张云尧)](http://aidaizyy.github.io)**
 **E-mail: <aidaizyy@gmail.com>**
-**Last Modified: [2015-07-22](http://aidaizyy.github.io)**
+**Last Modified: [2015-07-24](http://aidaizyy.github.io)**
 
 # 可选链
-如果请求和调用属性，方法和下标脚本的目标可能为空`nil`，这样的多次请求或调用就可以被链接起来，称为可选链。
+如果请求和调用属性，方法和下标的目标可能为空`nil`，这样的多次请求或调用就可以被链接起来，称为可选链。
 如果任何一个节点为空`nil`，整个可选链失效。
 ``` swift
 class Person { //人
@@ -78,7 +78,7 @@ if let buildingId = john.residence?.getId() {
 }
 // 打印 "John's building identifier is The Larches."。
 
-//下标脚本
+//下标
 if let firstRoomName = john.residence?[0].name {
     println("The first room name is \(firstRoomName).")
 } else {
@@ -95,12 +95,12 @@ if let johnsStreet = john.residence?.address?.street {
 // 打印 "Unable to retrieve the address.”。
 ```
 创建了`Person`的实例`john`，`john`中包含类`Residence`的实例`resindence`。
-`resindence`包含了可选类型的属性和方法，值可能为`nil`，所以访问它的属性，方法和下标脚注时都应该加上`?`。
+`resindence`包含了可选类型的属性和方法，值可能为`nil`，所以访问它的属性，方法和下标时都应该加上`?`。
 可选链中只要有一个节点为可选类型，可选链的结果就一定为可选类型。
 第39行，`john.residence?.numberOfRooms`的结果类型为`Int?`。
 第47行，`john.residence?.printNumberOfRooms()`的结果类型为`void?`。这里不能直接用函数结构作为布尔型去判断，而是与`nil`比较。
 第55行，`john.residence?.getId()`的结果类型为`String?`。
-第63行，`john.residence?[0].name`的结果类型为`String?`。这里的`?`放在`[0]`前，因为确保数组有值，才能通过下标脚注去访问。
+第63行，`john.residence?[0].name`的结果类型为`String?`。这里的`?`放在`[0]`前，因为确保数组有值，才能通过下标去访问。
 第71行，`john.reidence?.address?.street`的结果类型为`String?`。多层的可选链接链接到一起，`residence`和`address`都是可选类型，所以使用了两个`?`。如果给`john.residence.address`中的`address`分配实例，应该写作`john.residence!.address`，强制解析确保`residence`有值，才能对其中的`address`分配实例。
 
 # 自动引用计数

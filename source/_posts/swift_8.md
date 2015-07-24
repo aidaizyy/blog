@@ -1,4 +1,4 @@
-title: "Swift基础入门(8)：继承，构造过程和析构过程"
+title: "Swift基础入门(8)：继承，构造，析构和嵌套类型"
 date: 2015-07-21 17:17:02
 tags:
 - swift
@@ -6,18 +6,18 @@ categories: swift
 toc: true
 ---
 
-本篇介绍Swift的基础知识：类的继承；枚举，结构体和类的构造过程和析构过程。
+本篇介绍Swift的基础知识：类的继承；枚举，结构体和类的构造过程，析构过程和嵌套类型。
 
 <!--more-->
-**Title: [Swift基础入门(8)：继承，构造过程和析构过程](https://aidaizyy.github.io/swift_8)**
+**Title: [Swift基础入门(8)：继承，构造，析构和嵌套类型](https://aidaizyy.github.io/swift_8)**
 **Author: [Yunyao Zhang(张云尧)](http://aidaizyy.github.io)**
 **E-mail: <aidaizyy@gmail.com>**
-**Last Modified: [2015-07-22](http://aidaizyy.github.io)**
+**Last Modified: [2015-07-24](http://aidaizyy.github.io)**
 
 # 继承
 
 ## 基本语法
-子类（_subclass_）继承（_inherit_）继承超类/父类（_superclass_）的属性，方法，下标脚本和其他特性。
+子类（_subclass_）继承（_inherit_）继承超类/父类（_superclass_）的属性，方法，下标和其他特性。
 声明子类时，将超类名写在子类名的后面，用冒号分割：
 ``` swift
 class Vehicle {
@@ -107,7 +107,7 @@ println("AutomaticCar: \(automatic.description)")
 ```
 
 ## 防止重写
-属性，方法和下标脚本前面加上`final`关键字可以防止它们被重写。
+属性，方法和下标前面加上`final`关键字可以防止它们被重写。
 `final var`，`final func`，`final class func`，`final subscript`。
 
 # 构造过程
@@ -594,3 +594,54 @@ class ClassName {
 析构函数是在实例释放前被自动调用，不允许自己主动调用。
 子类的析构函数先调用，父类的析构函数后调用。子类没有提供析构函数，也会调用父类的析构函数。
 
+# 嵌套类型
+枚举，类和结构体可以想换嵌套，将需要嵌套的类型定义写在被嵌套类型的区域{}内，可以实现多级嵌套。
+
+``` swift
+struct BlackjackCard {
+    // 嵌套定义枚举型Suit
+    enum Suit: Character {
+       case Spades = "♠", Hearts = "♡", Diamonds = "♢", Clubs = "♣"
+    }
+
+    // 嵌套定义枚举型Rank
+    enum Rank: Int {
+       case Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+       case Jack, Queen, King, Ace
+       struct Values {
+           let first: Int, second: Int?
+       }
+       var values: Values {
+        switch self {
+        case .Ace:
+            return Values(first: 1, second: 11)
+        case .Jack, .Queen, .King:
+            return Values(first: 10, second: nil)
+        default:
+            return Values(first: self.toRaw(), second: nil)
+            }
+       }
+    }
+
+    // BlackjackCard 的属性和方法
+    let rank: Rank, suit: Suit
+    var description: String {
+    var output = "suit is \(suit.toRaw()),"
+        output += " value is \(rank.values.first)"
+        if let second = rank.values.second {
+            output += " or \(second)"
+        }
+        return output
+    }
+}
+```
+结构体`BlackjackCard`用来存储“二十一点游戏”中的扑克牌，嵌套了枚举类型`Suit`表示花色，嵌套了枚举类型`Rank`表示点数。而且`Rank`中又定义了结构体`Values`准确描述牌的大小：数字牌表示本身数字的大小，`Ace`表示1或者11，`Jack`，`Queen`和`King`表示10。
+结构体有默认的成员构造函数，这里的默认构造函数为：
+``` swift
+let theAceOfSpades = BlackjackCard(rank: .Ace, suit: .Spades)
+println("theAceOfSpades: \(theAceOfSpades.description)")
+// 打印出 "theAceOfSpades: suit is ♠, value is 1 or 11"
+
+let heartsSymbol = BlackjackCard.Suit.Hearts.toRaw()
+// 红心的符号 为 "♡"
+```
