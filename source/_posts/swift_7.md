@@ -12,7 +12,7 @@ toc: true
 **Title: [Swift基础入门(7)：属性，方法和下标](https://aidaizyy.github.io/swift_7)**
 **Author: [Yunyao Zhang(张云尧)](http://aidaizyy.github.io)**
 **E-mail: <aidaizyy@gmail.com>**
-**Last Modified: [2015-07-24](http://aidaizyy.github.io)**
+**Last Modified: [2015-07-27](http://aidaizyy.github.io)**
 
 # 属性
 属性分为存储属性（只能用于类和结构体）和计算属性（可用于类，结构体和枚举）。
@@ -145,10 +145,11 @@ stepCounter.totalSteps = 896
 
 ## 类型属性
 类型属性指所有类型实例公用的属性，类似于其他语言中的静态属性（_static_）。
-值类型可以定义存储型和计算型的类型属性。
-因为类是引用类型，所以只能定义计算型的类型属性。
+值类型（枚举和结构体）可以定义存储型和计算型的类型属性。
+引用类型（类）只能定义计算型的类型属性。
 存储型的类型属性必须指定默认值。
-类型属性在属性前加上`static`关键字。
+
+值类型（枚举和结构体）中在类型属性前加上关键字`static`，而引用类型（类）中在类型属性前加上关键字`class`。
 ``` swift
 struct SomeStructure {
     static var storedTypeProperty = "Some value."
