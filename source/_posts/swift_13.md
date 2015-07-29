@@ -6,7 +6,7 @@ categories: swift
 toc: true
 ---
 
-本篇介绍了Swift的基础知识：高级运算符，包括位运算符，溢出运算符和运算符重载与自定义。
+本篇介绍Swift的基础知识：高级运算符，包括位运算符，溢出运算符和运算符重载与自定义。
 
 <!--more-->
 **Title: [Swift基础入门(13)：高级操作符](https://aidaizyy.github.io/swift_13)**

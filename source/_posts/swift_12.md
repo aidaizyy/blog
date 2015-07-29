@@ -6,7 +6,7 @@ categories: swift
 toc: true
 ---
 
-本篇介绍了Swift的基础知识：泛型，适合任何类型的函数和类型。
+本篇介绍Swift的基础知识：泛型，适合任何类型的函数和类型。
 
 <!--more-->
 **Title: [Swift基础入门(12)：泛型](https://aidaizyy.github.io/swift_12)**
