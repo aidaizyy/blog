@@ -2,7 +2,7 @@ title: "Swift基础入门(7)：属性，方法和下标"
 date: 2015-07-20 10:10:20
 tags:
 - swift
-categories: 
+categories: swift
 toc: true
 ---
 

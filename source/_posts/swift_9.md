@@ -1,7 +1,8 @@
 title: "Swift基础入门(9)：可选链和自动引用计数"
 date: 2015-07-23 15:43:48
 tags:
-categories: 
+- swift
+categories: swift
 toc: true
 ---
 
