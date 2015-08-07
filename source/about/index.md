@@ -13,7 +13,7 @@ Research Area: Computer Architecture & High Performance Computer
 Laboratory: [High Performance Computer Research Center](http://www.ncic.ac.cn)
 
 Education: 
-- [Insitute of Computing Technology](http://www.ict.ac.cn), [University of Chinese Academy of Sciences](http://www.ucas.ac.cn), since 2015 
+- [Institute of Computing Technology](http://www.ict.ac.cn), [University of Chinese Academy of Sciences](http://www.ucas.ac.cn), since 2015 
 
 - [College of Software Engineering](http://sw.scu.edu.cn), [Sichuan University](http://www.scu.edu.cn), 2011 - 2015
 
