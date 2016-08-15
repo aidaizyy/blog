@@ -1,4 +1,4 @@
-title: dpdk编译运行
+title: DPDK编译运行
 toc: true
 date: 2015-04-28 14:46:52
 tags: 
