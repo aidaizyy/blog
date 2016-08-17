@@ -25,29 +25,24 @@
           <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-	<form class="search-form">
-	  <input type="search" name="word" id="ts-search-input" class="search-form-input" placeholder="Search">
-	  <input type="submit" value="" class="search-form-submit">
-	</form>
+	<input type="text" class="st-default-search-input">
+
+<!--	<form class="search-form">	-->
+<!--          <input type="search" name="word" id="st-search-input" class="search-form-input" placeholder="Search">  -->
+<!--          <input type="submit" value="" class="search-form-submit">	-->
+<!--        </form> -->
+
 <!--	<%- search_form({button: '&#xF002;'}) %> -->
       </div>
     </div>
   </div>
 </header>
 
-<script>
-var option = {
-  engineKey: '52b604265441aea83f5d'
-};
-(function(w,d,t,u,n,s,e){
-  s = d.createElement(t);
-  s.src = u;
-  s.async = 1;
-  w[n] = function(r){
-    w[n].opts = r;
-  };
-  e = d.getElementsByTagName(t)[0];
-  e.parentNode.insertBefore(s, e);
-})(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
-_ts(option);
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','2QtBffR6hVpoEmG7Vywh','2.0.0');
 </script>
