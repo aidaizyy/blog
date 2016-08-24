@@ -1,5 +1,6 @@
-http://aidaiz.com
-http://aidaiz.com/about
-http://aidaiz.com/dpdk
-http://aidaiz.com/dpdk_l2fwd
-http://aidaiz.com/android_proguard
+aidaiz.com
+wwww.aidaiz.com
+aidaiz.com/about
+aidaiz.com/dpdk
+aidaiz.com/dpdk-l2fwd
+aidaiz.com/spdk

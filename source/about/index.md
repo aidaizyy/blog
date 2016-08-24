@@ -21,6 +21,6 @@ Education:
 
 Weibo: [@张云尧](http://weibo.com/aidaiz)
 
-Github: [aidaizyy](https:///github.com/aidaizyy)
+GitHub: [aidaizyy](https:///github.com/aidaizyy)
 
 ![](http://7xivk7.com1.z0.glb.clouddn.com/about.jpg-about)

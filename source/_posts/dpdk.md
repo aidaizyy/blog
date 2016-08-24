@@ -12,7 +12,7 @@ DPDK（Data Plane Development kit）是Intel发布的数据包处理转发套件
 **Title: [dpdk编译运行](https://aidaizyy.github.io/dpdk)**
 **Author: [Yunyao Zhang(张云尧)](http://aidaizyy.github.io)**
 **E-mail: <aidaizyy@gmail.com>**
-**Last Modified: [2015-04-28](http://aidaizyy.github.io)**
+**Last Modified: [2016-08-23](http://aidaizyy.github.io)**
 
 ##下载
 
@@ -126,10 +126,12 @@ sudo insmod kmod/igb_uio.ko
 ```
 uio是kernel自带的用户空间IO模块
 igb_uio是dpdk编译的模块，出现在dpdk-2.0.0/build/kmod 或者dpdk-2.0.0/x86_64-native-linuxapp-gcc/kmod 目录中。
+（在新版本中可直接用`sudo modprobe uio_pci_generic`替代`uio`和`igb_uio`）
 
 ##绑定网卡
 
 查看当前网卡信息
+（在新版本中用`dpdk-devbind.py`替代`dpdk_nic_bind.py`）
 ``` bash
 cd dpdk-2.0.0
 ./tools/dpdk_nic_bind.py --status
@@ -147,9 +149,10 @@ Other network devices
 ```
 
 绑定网卡
+（在新版本中如果使用了`uio_pci_generic`，则把`--bind=`后的`igb_uio`换成`uio_pci_generic`）
 ``` bash
 ./tools/dpdk_nic_bind.py --bind=igb_uio 00:05.0
-``` 
+```
 
 绑定之前，保证网卡处于非活跃状态
 ``` bash
@@ -265,5 +268,5 @@ Option:
 
 - pktgen-dpdk: 基于DPDK的高速发包程序
 	DPDK官方网站：http://www.dpdk.org/browse/apps/pktgen-dpdk 
-	Github：http://github.com/pktgen/Pktgen-DPDK
+	GitHub：http://github.com/pktgen/Pktgen-DPDK
 
