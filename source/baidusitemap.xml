@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://aidaiz.com/ssh/</loc>
+    <lastmod>2016-08-25T07:55:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>SSH秘钥与SSHFS挂载</title>
+        <pubTime>2016-08-25T07:37:54.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="linux" url="http://aidaiz.com/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/dpdk/</loc>
+    <lastmod>2016-08-24T07:02:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>DPDK编译运行</title>
+        <pubTime>2015-04-28T06:46:52.000Z</pubTime>
+        
+        <tag>dpdk</tag>
+         
+         
+           
+             
+              <breadCrumb title="dpdk" url="http://aidaiz.com/categories/dpdk/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
+    <loc>http://aidaiz.com/dpdk_l2fwd/</loc>
+    <lastmod>2016-08-15T15:10:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>DPDK-l2fwd详解</title>
+        <pubTime>2015-03-31T05:59:13.000Z</pubTime>
+        
+        <tag>dpdk</tag>
+         
+         
+           
+             
+              <breadCrumb title="dpdk" url="http://aidaiz.com/categories/dpdk/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/spdk/</loc>
+    <lastmod>2016-08-15T15:09:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>SPDK简介</title>
+        <pubTime>2016-08-15T15:02:27.000Z</pubTime>
+        
+        <tag>spdk</tag>
+         
+         
+           
+             
+              <breadCrumb title="spdk" url="http://aidaiz.com/categories/spdk/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/hadoop/</loc>
+    <lastmod>2016-05-29T14:55:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hadoop安装运行</title>
+        <pubTime>2016-05-29T06:18:57.000Z</pubTime>
+        
+        <tag>hadoop</tag>
+         
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="hadoop" url="http://aidaiz.com/categories/hadoop/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/cache_miss_type/</loc>
+    <lastmod>2015-12-10T14:26:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>容量失效（capacity miss）与冲突失效（conflict miss）的区别</title>
+        <pubTime>2015-12-10T08:26:02.000Z</pubTime>
+        
+        <tag>cache</tag>
+         
+        <tag>computer architecture</tag>
+         
+         
+           
+             
+              <breadCrumb title="computer architecture" url="http://aidaiz.com/categories/computer-architecture/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_7/</loc>
+    <lastmod>2015-07-31T02:47:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(7)：属性，方法和下标</title>
+        <pubTime>2015-07-20T02:10:20.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_9/</loc>
+    <lastmod>2015-07-31T02:47:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(9)：可选链和自动引用计数</title>
+        <pubTime>2015-07-23T07:43:48.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_14/</loc>
+    <lastmod>2015-07-29T03:46:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(14)：权限控制</title>
+        <pubTime>2015-07-29T03:28:32.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_13/</loc>
+    <lastmod>2015-07-29T03:32:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(13)：高级运算符</title>
+        <pubTime>2015-07-28T03:59:40.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_12/</loc>
+    <lastmod>2015-07-29T03:32:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(12)：泛型</title>
+        <pubTime>2015-07-28T02:34:05.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_11/</loc>
+    <lastmod>2015-07-27T13:53:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(11)：扩展和协议</title>
+        <pubTime>2015-07-24T08:28:22.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_8/</loc>
+    <lastmod>2015-07-24T09:04:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(8)：继承，构造，析构和嵌套类型</title>
+        <pubTime>2015-07-21T09:17:02.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_6/</loc>
+    <lastmod>2015-07-24T09:02:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(6)：枚举，类和结构体</title>
+        <pubTime>2015-07-19T14:47:43.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_10/</loc>
+    <lastmod>2015-07-24T08:08:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(10)：类型转换</title>
+        <pubTime>2015-07-24T07:23:06.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_1/</loc>
+    <lastmod>2015-07-24T07:22:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(1)：常量变量，基本数据类型和基本运算符</title>
+        <pubTime>2015-07-14T07:23:13.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_5/</loc>
+    <lastmod>2015-07-22T15:15:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(5)：函数和闭包</title>
+        <pubTime>2015-07-16T09:11:53.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_4/</loc>
+    <lastmod>2015-07-21T08:52:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(4)：条件与循环语句</title>
+        <pubTime>2015-07-16T06:36:11.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_3/</loc>
+    <lastmod>2015-07-21T08:50:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(3)：数组，集合和字典</title>
+        <pubTime>2015-07-15T09:04:30.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/swift_2/</loc>
+    <lastmod>2015-07-15T09:17:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift基础入门(2)：字符串和字符</title>
+        <pubTime>2015-07-15T06:09:04.000Z</pubTime>
+        
+        <tag>swift</tag>
+         
+         
+           
+             
+              <breadCrumb title="swift" url="http://aidaiz.com/categories/swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://aidaiz.com/android_proguard/</loc>
+    <lastmod>2015-07-13T10:36:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android代码混淆（Proguard）</title>
+        <pubTime>2015-07-13T03:42:52.000Z</pubTime>
+        
+        <tag>android</tag>
+         
+        <tag>proguard</tag>
+         
+         
+           
+             
+              <breadCrumb title="android" url="http://aidaiz.com/categories/android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+</urlset>

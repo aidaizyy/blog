@@ -19,10 +19,11 @@ widgets:
 #- tagcloud
 - archive
 - recent_posts
-#- links
+- links
 
 # Links
 links:
+    潮鸣: http://yunhuanran.github.io
 
 # Miscellaneous
 google_analytics:
@@ -38,5 +39,3 @@ duoshuo_shortname: aidaiz
 # Baidu share
 baidushare: true
 
-swift_search: 
-  enable: false

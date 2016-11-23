@@ -1,6 +1,0 @@
-aidaiz.com
-wwww.aidaiz.com
-aidaiz.com/about
-aidaiz.com/dpdk
-aidaiz.com/dpdk-l2fwd
-aidaiz.com/spdk

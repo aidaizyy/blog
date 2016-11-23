@@ -14,7 +14,7 @@ DPDK（Data Plane Development kit）是Intel发布的数据包处理转发套件
 **E-mail: <aidaizyy@gmail.com>**
 **Last Modified: [2016-08-23](http://aidaizyy.github.io)**
 
-##下载
+## 下载源码
 
 下载DPDK-2.0.0
 ``` bash
@@ -27,7 +27,7 @@ wget http://www.dpdk.org/browse/dpdk/snapshot/dpdk-2.0.0.tar.gz
 tar -xvzf dpdk-2.0.0.tar.gz
 ```
 
-##准备
+## 准备环境
 
 ### linux kernel header
 
@@ -94,7 +94,7 @@ HugePages_Surp:        0
 Hugepagesize:       2048 kB
 ```
 
-##编译
+## 编译安装
 ``` bash
 cd dpdk-2.0.0
 make install T=x86_64-native-linuxapp-gcc
@@ -118,7 +118,7 @@ make
 make install会将编译后的文件放入新建的x86_64-native-linuxapp-gcc目录。
 make config + make会将编译后的文件放入新建的build目录。
 
-##加载模块
+## 加载模块
 
 ``` bash
 sudo modprobe uio
@@ -128,7 +128,7 @@ uio是kernel自带的用户空间IO模块
 igb_uio是dpdk编译的模块，出现在dpdk-2.0.0/build/kmod 或者dpdk-2.0.0/x86_64-native-linuxapp-gcc/kmod 目录中。
 （在新版本中可直接用`sudo modprobe uio_pci_generic`替代`uio`和`igb_uio`）
 
-##绑定网卡
+## 绑定网卡
 
 查看当前网卡信息
 （在新版本中用`dpdk-devbind.py`替代`dpdk_nic_bind.py`）
@@ -159,7 +159,7 @@ Other network devices
 ifconfig eth0 down
 ```
 
-##运行示例
+## 运行示例
 
 运行helloworld示例
 ``` bash
@@ -190,7 +190,7 @@ hello from core 0。
 
 其他示例程序参数有不同要求，参见官方网站的说明文档。
 
-##脚本安装
+## 脚本安装
 
 DPDK提供了更简单的脚本安装。
 在解开压缩包和设置好环境变量RTE_SDK和RTE_TARGET后，运行setup.sh脚本。
@@ -255,7 +255,7 @@ Option:
 依次执行9-12-15-18就可以达到和上面一样的结果。
 当然不同情况，脚本执行步骤不同。
 
-##示例程序
+## 示例程序
 
 几个值得关注的示例程序。
 
