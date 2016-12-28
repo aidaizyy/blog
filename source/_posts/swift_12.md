@@ -163,3 +163,7 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 // 输出 "All items match."
 ```
 这个函数的作用是比较两个容器的元素是否完全一样。
+
+** 转载请注明原作者和出处。**
+> 如果觉得这篇文章对您有帮助或启发，请随意打赏~
+<p> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode01.jpg" width = "250" align = "left" /> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode02.jpg" width = "250" align = "left" /> </p>

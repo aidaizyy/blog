@@ -1,19 +1,19 @@
 title: Open vSwitch安装与使用
 toc: true
 date: 2016-11-23 14:26:26
-tags: 
+tags:
 - openvswitch
 - openflow
 categories: openvswitch
 ---
 
-Open vSwitch是Apache 2.0协议下，实现分布式虚拟多层网络交换机功能的产品级开源软件，其目的是为硬件虚拟化环境提供交换机堆栈，支持计算机网络中使用的多种协议和标准
+Open vSwitch是Apache 2.0协议下，实现分布式虚拟多层网络交换机功能的产品级开源软件，其目的是为硬件虚拟化环境提供交换机堆栈，支持计算机网络中使用的多种协议和标准。其具体概念参考[官方文档](https://github.com/openvswitch/ovs/blob/master/Documentation/faq/general.rst) 。
 
 <!--more-->
 **Title: [Open vSwitch安装与使用](https://aidaizyy.github.io/openvswitch-build)**
 **Author: [Yunyao Zhang(张云尧)](http://aidaizyy.github.io)**
 **E-mail: <aidaizyy@gmail.com>**
-**Last Modified: [2016-11-23](http://aidaizyy.github.io)**
+**Last Modified: [2016-12-27](http://aidaizyy.github.io)**
 
 本文使用的服务器操作系统发行版本为CentOS 6.3，kernel版本为2.6.32-279.el6.x86_64，Open vSwitch版本为2.4.1。
 
@@ -24,11 +24,11 @@ Open vSwitch是Apache 2.0协议下，实现分布式虚拟多层网络交换机�
 sudo wget http://openvswitch.org/releases/openvswitch-2.4.1.tar.gz
 ```
 如需其他版本，把上面的2.4.1替换为2.6.1或者2.5.1或者更低的版本。
-或者直接到官网[](http://openvswitch.org/download)下载。
+或者直接到官网http://openvswitch.org/download 下载。
 
 ## 准备环境
 
-安装Open vSwitch需要准备的环境，可以参考[](https://github.com/openvswitch/ovs/blob/master/INSTALL.rst)的"Build Requirements"部分。
+安装Open vSwitch需要准备的环境，可以参考https://github.com/openvswitch/ovs/blob/master/Documentation/intro/install/general.rst 的"Build Requirements"部分。
 摘自官方文档：
 需要的软件：
 - GNU make
@@ -97,6 +97,8 @@ lsmod | grep openvswitch
 
 如果一直加载模块不成功，可以用命令`modinfo openvswitch`查看该模块的信息，内核版本以及依赖关系等。或者用`dmesg | tail`查看kernel的日志信息。
 
+关于ovs的内核模块的作用，可以参考https://github.com/openvswitch/ovs/blob/master/Documentation/intro/why-ovs.rst 。
+
 ## 初始操作
 
 遇到权限不够时，使用`sudo`命令或`root`用户，或者`libcap-ng`。
@@ -137,6 +139,12 @@ ovs-vswitchd --pidfile --detach --log-file
 `--log-file`的意思是创建一个日志文件，默认路径为`/usr/local/var/log/openvswitch/`，可以查看该后台程序的日志。
 其他参数可通过`man ovs-vswitchd`查看。
 
+``` bash
+ps -ea | grep ovs
+```
+用`ps`命令查看当前运行的ovs进程，一共有两个进程，分别是ovs-server和ovs-vswitchd。
+这两个进程的pidfile都在`/usr/local/var/run/openvswitch/`中，可以用`ovs-appctl`管理。
+
 ## 应用举例
 
 `ovs-vsctl`命令主要是把配置信息更新到数据库中。
@@ -154,6 +162,8 @@ ovs-vsctl add-br br0 -- set bridge br0 datapath_type=netdev
 `--`替代`ovs-vsctl`命令，也可以拆成两个语句执行。
 后面的操作表示把数据库中ovs网桥br0的datapath_type属性的值设为netdev，对br0的其他属性设置操作类似。
 netdev表示用户态数据通路，system表示内核数据通路。
+
+关于用户态空间ovs的更多资料，可以参考https://github.com/openvswitch/ovs/blob/master/Documentation/intro/install/userspace.rst 。
 
 删除ovs网桥br0
 ``` bash
@@ -184,7 +194,9 @@ br0接管以太网卡端口eth0
 ovs-vsctl add-port br0 eth0
 ```
 因为eth0是实际存在的端口，不需要特意设置类型为internal。
-这时存在一个问题，以上操作执行后，eth0直接断网，不能连接到外网，如果使用ssh连接的服务器的就要小心了。（实际使用中发现只有在内核模式下才会断网，用户态模式下不会断网。）
+这时存在一个问题，以上操作执行后，eth0直接断网，不能连接到外网，如果使用ssh连接的服务器的就要小心了。
+（实际使用中发现只有在内核模式下才会断网，用户态模式下不会断网。）
+
 要解决这个问题，只需要把eth0的相同ip/子网掩码/网关等设置移植给br0即可。
 比如eth0的ip为192.168.1.100，子网掩码为255.255.0.0，网关为192.168.0.254。
 ``` bash
@@ -200,6 +212,21 @@ route add default gw 192.168.0.254
 上面设置了默认网关，其他的路由设置自行查询`route`命令用法设置。
 这时能ping通外网的话，表示设置成功。
 
+`ovs-vsctl show`显示ovs交换机的信息。
+``` bash
+$ ovs-vsctl show
+89da09a9-a172-4e62-b4a0-afc36760ad16
+    Bridge "br0"
+        Port "p0"
+            Interface "p0"
+                type: internal
+        Port "br0"
+            Interface "br0"
+                type: internal
+        Port "eth0"
+            Interface "eth0"
+```
+
 ### 虚拟端口连接外网
 实际上这时p0在网桥中，已经连接到外网了，但还不能使用，因为p0还没有up。
 同样设置ip和子网掩码，然后用混杂模式up。
@@ -214,8 +241,14 @@ ifconfig p0 promisc up
 ping -I p0 http://www.baidu.com
 ```
 
+> 这里可能会有疑问，为什么不直接创建一个tap设备来替代这个虚拟端口？关于这个问题，在https://github.com/openvswitch/ovs/blob/master/Documentation/faq/issues.rst 其中的“Q: I created a tap device tap0, configured an IP address on it, and add it to a bridge. I exacped that I counld then use this IP address to contract other hosts on the network, but it doesn't work. Why not?”部分有解答。
+除了ovs内部的虚拟端口，加入ovs的其他网络设备发送的数据包都会被丢弃。假如我们在tap设备上ping任意一个ip地址，tap设备将会发送ARP数据包，但是这些ARP数据包都会被丢弃，所以tap设备无法正常工作。在上面的场景中，只能用ovs内部的虚拟端口来实现。
+
 ## 参考资料
 
 * Open vSwitch官网：http://openvswitch.org
 * Github地址：https://github.com/openvswitch/ovs
-* http://www.ibm.com/developerworks/cn/cloud/library/1401_zhaoyi_openswitch/
+
+** 转载请注明原作者和出处。**
+> 如果觉得这篇文章对您有帮助或启发，请随意打赏~
+<p> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode01.jpg" width = "250" align = "left" /> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode02.jpg" width = "250" align = "left" /> </p>

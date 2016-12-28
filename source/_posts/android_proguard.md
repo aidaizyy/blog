@@ -158,3 +158,7 @@ http://jd.benow.ca/
 
 通过这个两个工具可以将apk转化为java源文件。
 通过Proguard生成的apk可转化为java源文件来进行比对以检测Proguard是否生效。
+
+** 转载请注明原作者和出处。**
+> 如果觉得这篇文章对您有帮助或启发，请随意打赏~
+<p> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode01.jpg" width = "250" align = "left" /> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode02.jpg" width = "250" align = "left" /> </p>

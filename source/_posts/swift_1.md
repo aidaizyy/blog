@@ -7,7 +7,7 @@ toc: true
 ---
 
 Swift是苹果公司于2014年推出的用于iOS，OS X和watchOS应用开发的新语言。
-目前最新的版本是Swift 2.0。
+基于Swift 1.2。
 本篇介绍Swift的基础知识：常量变量，基本数据类型和基本运算符。
 
 <!--more-->
@@ -241,3 +241,7 @@ Int->String：`String(Int)`函数可以把`Int`转换成`String`。
 
 `a..<b`，闭区间运算符，表示`a`到`b`的区间，包含`a`，不包含`b`；
 `a...b`，半开区间运算符，表示`a`到`b`的区间，包含`a`和`b`。
+
+** 转载请注明原作者和出处。**
+> 如果觉得这篇文章对您有帮助或启发，请随意打赏~
+<p> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode01.jpg" width = "250" align = "left" /> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode02.jpg" width = "250" align = "left" /> </p>

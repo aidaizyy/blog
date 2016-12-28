@@ -296,3 +296,7 @@ paragraph = nil
 上面的例子中，闭包的指定参数列表和返回类型可以通过上下文推断，所以省略。`in`放在占用列表之后。
 这里使用了无主引用，闭包通过`unowned self`对类`HTMLELement`无主引用。
 最后一句，赋值`nil`给`paragraph`，没有了闭包对它的强引用，可以销毁并调用析构函数。
+
+** 转载请注明原作者和出处。**
+> 如果觉得这篇文章对您有帮助或启发，请随意打赏~
+<p> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode01.jpg" width = "250" align = "left" /> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode02.jpg" width = "250" align = "left" /> </p>

@@ -236,3 +236,7 @@ incrementByTen()
 `incremetnBySeven`创建时，一个新的`runningTotal`也创建了，每调用一次函数其值就会增加7。这个变量和`incrementByTen`中的变量没有任何关系，互不干扰。
 
 注意：无论是函数还是闭包，在赋值给常量或变量时都是**引用拷贝**，指向的是同一个函数/闭包对象。
+
+** 转载请注明原作者和出处。**
+> 如果觉得这篇文章对您有帮助或启发，请随意打赏~
+<p> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode01.jpg" width = "250" align = "left" /> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode02.jpg" width = "250" align = "left" /> </p>

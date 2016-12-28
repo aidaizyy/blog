@@ -62,3 +62,6 @@ SPDK的一部分是作为开源可获得的，BSD许可组件（比如NVMe和CBD
 **开发团队自己是否具有理解和解决问题的专业技能？**
 Intel没有为相关软件提供支持的义务。当Intel和围绕SPDK的开源社区将付出商业上合理的努力去调出未修改的发布版本软件的潜在错误，任何情况下Intel都没有任务义务为用户提供针对该软件任何形式的维护和支持。
 
+** 转载请注明原作者和出处。**
+> 如果觉得这篇文章对您有帮助或启发，请随意打赏~
+<p> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode01.jpg" width = "250" align = "left" /> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode02.jpg" width = "250" align = "left" /> </p>

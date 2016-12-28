@@ -176,3 +176,7 @@ loop: for integer in 1...10 {
 }
 ```
 上面代码中，给`for-in`循环指定了标签`loop`，我们要求得到第一个质数，所以当遇到质数后用`break loop`结束循环。如果不加标签，`break`只能结束`switch`语句，会继续执行循环，不能达到目的。
+
+** 转载请注明原作者和出处。**
+> 如果觉得这篇文章对您有帮助或启发，请随意打赏~
+<p> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode01.jpg" width = "250" align = "left" /> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode02.jpg" width = "250" align = "left" /> </p>

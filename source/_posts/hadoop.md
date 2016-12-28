@@ -212,3 +212,6 @@ Estimated value of Pi is 3.14800000000000000000
 ```
 说明自带的例子hadoop-mapreduce-examples-2.6.4.jar已经成功运行，至此确认Hadoop已经成功安装。
 
+** 转载请注明原作者和出处。**
+> 如果觉得这篇文章对您有帮助或启发，请随意打赏~
+<p> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode01.jpg" width = "250" align = "left" /> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode02.jpg" width = "250" align = "left" /> </p>

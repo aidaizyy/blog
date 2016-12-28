@@ -217,3 +217,7 @@ let airportNames = Array(airports.values)
 - Dictionary.removeValueForKey(key)：删除字典`Dictionary`中键`key`对应的值，返回删除的值，如果不存在，则返回`nil`。
 
 添加操作和删除操作返回值有可能为`nil`，都是可选类型，使用时需要进行判断是否有值。
+
+** 转载请注明原作者和出处。**
+> 如果觉得这篇文章对您有帮助或启发，请随意打赏~
+<p> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode01.jpg" width = "250" align = "left" /> <img src="http://7xivk7.com1.z0.glb.clouddn.com/paycode02.jpg" width = "250" align = "left" /> </p>
