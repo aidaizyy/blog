@@ -36,7 +36,7 @@ chmod 600 authorized_keys
 chmod 700 -R .ssh
 ```
 ## 添加秘钥到SSH-AGENT
-Ssh-agent就是秘钥管理器，需要把私钥添加进去才可以使用ssh;
+ssh-agent就是秘钥管理器，需要把私钥添加进去才可以使用ssh;
 先确保ssh-agent是否可用：
 ``` bash
 eval "$(ssh-agent -s)"
@@ -76,6 +76,11 @@ user指远程用户名，host指远程主机地址，dir指要挂载的远程目
 * -o reconnect：自动重连
 * -o allow_other：无视用户权限
 * -o cache=yes：支持cache
+
+卸载远程目录，使用卸载设备命令“umount”。
+``` bash
+umount localdir
+```
 
 其他相关参数可以查阅资料或者通过`sshfs -h`了解。
 
