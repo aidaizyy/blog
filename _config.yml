@@ -1,5 +1,5 @@
 # Hexo Configuration
-## Docs: http://hexo.io/docs/configuration.html
+## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
@@ -10,21 +10,24 @@ description:
 author: Yunyao Zhang（张云尧） 
 email: aidaizyy@gmail.com 
 language: default
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://aidaiz.com
 root: /
 permalink: :title/
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
 permalink_defaults:
 
 # Directory
 source_dir: source
 public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -35,9 +38,11 @@ filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
+future: true
 highlight:
   enable: true
   line_number: true
+  auto_detect: false
   tab_replace:
 
 # Category & Tag
@@ -70,7 +75,7 @@ logger_format: dev
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: MMM D YYYY
-time_format: H:mm:ss
+time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -82,18 +87,12 @@ disqus_shortname:
 duoshuo_shortname: aidaiz
 
 # Extensions
-## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
-## Themes: https://github.com/hexojs/hexo/wiki/Themes
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
 theme: landscape-plus
-exclude_generator:
-
-plugins:  
-- hexo-generator-feed
-- hexo-generator-sitemap
-- hexo-generator-baidu-sitemap
 
 # Deployment
-## Docs: http://hexo.io/docs/deployment.html
+## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: 

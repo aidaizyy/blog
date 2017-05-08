@@ -129,7 +129,7 @@ ping -I p0 www.baidu.com
 ovs-ofctl dump-tables br0
 
 #删除端口id为101的端口上所有的的流表条目
-ovs-ofctl del-flows bro in_port=101
+ovs-ofctl del-flows br0 in_port=101
 ```
 
 关于OpenFlow的应用不再做更多介绍，可以参考上面列出的两篇文章。
